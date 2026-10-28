@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com https://api.groq.com https://openrouter.ai https://api.openai.com https://api.anthropic.com https://ntfy.sh https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Planéo : le planificateur qui vous suit pas à pas</title>
+  <meta name="description" content="Affinez vos idées avec l’IA, transformez-les en feuille de route, tâches, checklists et rappels, puis suivez vos progrès.">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C0A0D" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Planéo">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Aller au contenu</a>
+  <div class="shell">
+    <nav id="nav" class="nav" aria-label="Navigation principale">
+      <a class="brand" href="#/" aria-label="Planéo, accueil">
+        <svg aria-hidden="true" viewBox="0 0 512 512"><defs><linearGradient id="plg-bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6E1B26"/><stop offset="1" stop-color="#3A0A10"/></linearGradient><radialGradient id="plg-glow" cx="390" cy="130" r="280" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f3965c" stop-opacity=".38"/><stop offset="1" stop-color="#f3965c" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" rx="116" fill="url(#plg-bg)"/><rect width="512" height="512" rx="116" fill="url(#plg-glow)"/><g transform="translate(256 256) scale(1.0) translate(-256 -256)"><path d="M150 436 V 264 C 150 170, 294 152, 310 238 C 320 294, 252 320, 198 302" fill="none" stroke="#f3965c" stroke-width="22" stroke-linecap="round" stroke-dasharray="1 38"/><circle cx="150" cy="436" r="19" fill="#FFE2CF"/><circle cx="150" cy="360" r="14" fill="#FFE2CF"/><g transform="translate(244 54) scale(.54)"><polygon points="430,98 92,238 236,292" fill="#FFE2CF"/><polygon points="430,98 236,292 300,428" fill="#f3965c"/><polygon points="236,292 300,428 252,350" fill="#b26c4d"/><polygon points="236,292 252,350 214,380" fill="#8A3F33"/></g></g></svg>
+        <span>Planéo</span>
+      </a>
+      <a href="#/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg><span>Aujourd’hui</span><span id="nav-badge" class="badge" hidden></span></a>
+      <a href="#/projets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4M6 4h11l-2 4 2 4H6"/></svg><span>Projets</span></a>
+      <a href="#/taches"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg><span>Tâches</span></a>
+      <a href="#/atelier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span>Atelier</span></a>
+      <a href="#/reglages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span>Réglages</span></a>
+    </nav>
+    <main id="view" tabindex="-1">
+      <p class="loading">Chargement…</p>
+    </main>
+  </div>
+  <dialog id="modal" aria-label="Fenêtre"></dialog>
+  <div class="busy-bar" aria-hidden="true"></div>
+  <noscript>Planéo a besoin de JavaScript pour fonctionner.</noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

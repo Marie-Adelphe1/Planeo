@@ -1,0 +1,21 @@
+{
+  "name": "Planéo : le planificateur qui vous suit pas à pas",
+  "short_name": "Planéo",
+  "description": "Affinez vos idées avec l’IA, transformez-les en feuille de route, tâches et rappels, puis suivez vos progrès.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#521119",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "Atelier IA", "url": "./#/atelier" },
+    { "name": "Tâches", "url": "./#/taches" }
+  ]
+}
